@@ -12,6 +12,7 @@
             width:90%;
             heigth:500px;
             padding: 10%;
+            margin:1em;
         }
     </style>
     <title>Document</title>
@@ -26,7 +27,8 @@
     <div class="AnimateDis">IWANTDISTOBEANAMATED</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
-        gsap.to(".AnimateDis",{duration:2,opacity:0});
+        gsap.registerPlugin(ScorllTrigger)
+        gsap.to(".AnimateDis",{scrollTrigger:".AnimateDis",duration:2,opacity:0});
        
        </script>
 </body>
